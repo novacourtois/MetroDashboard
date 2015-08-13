@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metro Dashboard</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+      <div class="header">
+        <nav class="top-bar" data-topbar="">
+          <section class="top-bar-section">
+            <ul class="right">
+              <li>
+                <a href="" class="">Home</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="" class="">Pipeline</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="" class="">Closings</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="" class="">Forms</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="" class="">Log Out</a>
+              </li>
+              <li class="divider"></li>
+            </ul>
+          </section>
+        </nav>
+        <div class="row header_info">
+          <div class="small-4 columns">
+            <h1>Loan Name</h1>
+            <div class="header_description">
+              Camilla Smith</br>
+              Jamillion Smithsonian</br>
+              James Brown</br>
+              Brown Regal Properties LLC</br>
+              100 45th Ave, #304 New York, New York 56605</br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div ng-view class="grid-content">
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="https://code.angularjs.org/1.2.24/angular-route.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</html>

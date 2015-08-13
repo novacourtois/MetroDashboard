@@ -1,0 +1,160 @@
+---
+name: home
+url: /
+---
+
+<!-- 
+<div class="grid-container">
+  <div class="row">
+<div class="large-3 columns">.large-3.columns</div>
+<div class="large-3 columns">.large-3.columns</div>
+<div class="large-3 columns">.large-3.columns</div>
+<div class="large-3 columns">.large-3.columns</div>
+</div>
+</div> -->
+
+<section id="main-content">
+
+	<div class="row max_width_row">
+		<div class="small-2 columns form_sidebar">
+			<ul class="loan_list">
+				<li ng-click="setForm('loanRequest')" ng-class="{'active': currentFormName=='loanRequest'}">
+					<a>
+						<img class="form-icon" src="./images/icons/formicon-loanrequests.png"/>LOAN REQUEST 
+					</a>
+				</li>
+				<li ng-click="setForm('sponsor')" ng-class="{'active': currentFormName=='sponsor'}">
+					<a >
+						<img class="form-icon" src="./images/icons/formicon-sponsor.png"/>SPONSOR
+					</a>	
+				</li>
+				<li ng-click="setForm('title')" ng-class="{'active': currentFormName=='title'}">
+					<a>
+						<img class="form-icon" src="./images/icons/formicon-title.png"/>TITLE
+					</a>	
+				</li>
+				<li ng-click="setForm('purchase')" ng-class="{'active': currentFormName=='purchase'}">
+					<a>
+						<img class="form-icon" src="./images/icons/formicon-purchase.png"/>PURCHASE
+					</a>	
+				</li>
+				<li ng-click="setForm('realEstate')" ng-class="{'active': currentFormName=='realEstate'}">
+					<a>
+						<img class="form-icon" src="./images/icons/formicon-realestate.png"/>REAL ESTATE
+					</a>	
+				</li>
+				<li ng-click="setForm('income')" ng-class="{'active': currentFormName=='income'}">
+					<a>
+						<img class="form-icon" src="./images/icons/formicon-income.png"/>INCOME
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="small-7 columns form_section">
+			<div class="form_section_tools">
+				<ul>
+					<li ng-click="setTool('1')" ng-class="{'active': currentTool=='1'}">
+						<img class="tools-icon" src="./images/icons/tools-icon1.png"/>
+					</li>
+					<li ng-click="setTool('2')" ng-class="{'active': currentTool=='2'}">
+						<img class="tools-icon" src="./images/icons/tools-icon2.png"/>
+					</li>
+					<li ng-click="setTool('3')" ng-class="{'active': currentTool=='3'}">
+						<img class="tools-icon" src="./images/icons/tools-icon3.png"/>
+					</li>
+					<li ng-click="setTool('4')" ng-class="{'active': currentTool=='4'}">
+						<img class="tools-icon" src="./images/icons/tools-icon4.png"/>
+					</li>
+					<li ng-click="setTool('5')" ng-class="{'active': currentTool=='5'}">
+						<img class="tools-icon" src="./images/icons/tools-icon5.png"/>
+					</li>
+					<li ng-click="setTool('6')" ng-class="{'active': currentTool=='6'}">
+						<img class="tools-icon" src="./images/icons/tools-icon6.png"/>
+					</li>
+					<li ng-click="setTool('7')" ng-class="{'active': currentTool=='7'}">
+						<img class="tools-icon" src="./images/icons/tools-icon7.png"/>
+					</li>
+					<li ng-click="setTool('8')" ng-class="{'active': currentTool=='8'}">
+						<img class="tools-icon" src="./images/icons/tools-icon8.png"/>
+					</li>
+				</ul>
+			</div>
+			<div class="form_section_main">
+				<div class="form_section_header_wrap">
+					<div class="form_section_header">
+						<h1>PAGE NAME</h1>
+						<ul class="section_links" ng-hide="currentForm==''">
+							<li ng-repeat="section in currentFormSections"><a ng-repeat="(key,val) in section" ng-click="goToElement('background')">{{key}}</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form_section_content" ng-hide="currentForm==''">
+					
+					<form>
+						<div ng-repeat = "input in currentForm">
+
+							<label ng-repeat ="i in input">
+								{{i}}
+								<input class="form_input" type="text" placeholder="placeholder" />
+						    </label>
+						</div>
+						<div ng-repeat = "section in currentFormSections">
+							<div ng-repeat ="(key,section_info) in section">
+								<h2 id="{{key}}">{{key}}</h2>
+								<label ng-repeat="val in section_info">
+									{{val}}
+									
+									<input class="form_input" type="text" placeholder="placeholder" />
+							    </label>
+							</div>
+						</div>
+
+						<button class="button small">Save</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="small-3 columns right_sidebar">	
+			<div class="notifications">		
+				<ul class="notifications_list">
+					<li>Insurance 3 days late</li>
+					<li>Call booking agent ASAP</li>
+					<li>Loan Processing agreement breached</li>
+				</ul>
+			</div>
+	
+			<div class="progress_section">
+				Loan Request Completion
+				<div class="progress large-9">
+			    	<span class="meter" style="width: 80%"></span>
+			    </div>
+			    Sponsor Completion
+			    <div class="progress large-9">
+			    	<span class="meter" style="width: 80%"></span>
+			    </div>
+			    Title Completion
+			    <div class="progress large-9">
+			    	<span class="meter" style="width: 80%"></span>
+			    </div>
+			    Purchase Completion
+			    <div class="progress large-9">
+			    	<span class="meter" style="width: 80%"></span>
+			    </div>
+			    Real Estate Completion
+			    <div class="progress large-9">
+			    	<span class="meter" style="width: 80%"></span>
+			    </div>
+			    Income Completion
+			    <div class="progress large-9">
+			    	<span class="meter" style="width: 80%"></span>
+			    </div>
+			</div>
+
+			<div class="more_info">
+				Title and Settlement Info</br>
+				
+			    Loan Processing Info			   
+			</div>
+		</div>
+	</div>
+</section>

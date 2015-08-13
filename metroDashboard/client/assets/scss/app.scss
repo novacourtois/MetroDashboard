@@ -1,0 +1,261 @@
+@import "settings";
+@import "foundation";
+
+html,body {
+	background: #333;
+	color: #fff;
+	height: 100%;
+	max-height: 100%;
+}
+
+html, body, a, div, li, span, p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.grid-frame {
+	height: 100%;
+}
+.grid-content {
+	height: 70%;
+	padding: 0;
+}
+
+.header {
+	height: 30%;
+	background: url('../../images/banner.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .top-bar {
+  	float: right;
+  	background: transparent;
+  	margin-right: 40px;
+  }
+
+  .header_info {
+  	width: 100%;
+  	max-width: 100%;
+  	padding-top: 45px;
+
+  	h1 {
+  		text-align: right;
+  		font-weight: bold;
+  		font-size: 3.2em;
+  		border-bottom: 3px solid #ccc;
+  	}
+
+  	.header_description {
+  		padding-left: 200px;
+  		color: black;
+  		font-size: 11px;
+  	}
+  }
+}
+#main-content {
+	height: 100%;
+	.max_width_row {
+		max-width: 100%;
+		height: 100%;
+	}
+}
+.form_sidebar {
+	background: #222;
+	height: 100%;
+	border-right: 2px solid #000;
+	padding: 0;
+
+	.loan_list {
+		margin: 0;
+
+		list-style-type: none;
+		li {
+			padding: 10px 15px 10px 20px;
+			&:hover {
+				background: black;
+			}
+			
+		}
+		li.active {
+			background: black;
+			border-right: 2px solid lightblue;
+		}
+
+		.form-icon {
+			width: 15px;
+			margin-right: 20px;
+		}
+		a {
+			color: white;
+			width: 100%;
+			display: block;
+			font-size: 14px;
+			&:hover {
+				background: black;
+			}
+		}
+	}
+
+}
+
+.form_section {
+	padding: 0;
+	height: 100%;
+	overflow-y: auto;
+
+	.form_section_tools {
+		width: 50px;
+		height: 100%;
+		background: #222;
+		float: left;
+		ul {
+			margin: 0;
+			list-style-type: none;
+
+			li {
+				padding: 10px;
+				text-align: center;
+				width: 100%;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			li.active {
+				background: #333;
+			}
+
+			.tools-icon {
+
+			}
+		}
+	}
+
+	.form_section_main {
+		margin-left: 50px;
+		margin-right: 20px;
+
+		.form_section_header {
+			margin-left: 15px;
+
+			border-bottom: 3px solid #888;
+
+			h1 {
+				color: lightblue;
+				font-weight: 200;
+				display: inline-block;
+				margin: 0;
+			}
+
+			.section_links {
+				float:right;
+				margin: 25px 0 0 0;
+				font-size: 10px;
+				list-style-type: none;	
+				display: inline;
+				li {
+					display: inline-block;
+					padding: 5px;
+
+					a {
+						color: white;
+						&:hover {
+							font-weight: bold;
+
+						}
+					}
+					
+				}
+			}	
+
+		}
+
+		.form_section_content {
+			padding-top: 20px;
+			margin-left: 20px;
+
+			label {
+				color: #fff;
+			}
+
+			.form_input {
+				display: block;
+			    width: 350px;
+			    height: 34px;
+			    padding: 6px 12px;
+			    font-size: 14px;
+			    line-height: 1.42857143;
+			    color: #fff;
+			    background-color: transparent;
+			    background-image: none;
+			    border: 1px solid #ccc;
+			    border-radius: 4px;
+			    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+			    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			}
+		}
+
+	}
+	
+
+
+	
+}
+
+.right_sidebar {
+	height: 100%;
+	max-height: 100%;
+	background: #222;
+	padding:20px 0 0 0;
+	overflow-y: auto;
+
+
+	.notifications {
+		padding: 10px;
+		margin: 10px;
+		margin-bottom: 15px;
+		background: black;
+		color: pink;
+		
+		border-left: 3px solid pink;
+		.notifications_list {
+			list-style-type: none;
+			margin: 0;
+			
+			li {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.progress_section {
+		margin: 10px;
+		padding: 10px;
+		font-size: 12px;
+		margin-bottom: 15px;
+		background: black;
+		border-left: 3px solid lightblue;
+
+		.progress {
+			margin-top: 3px;
+			background: transparent;
+			height: 5px;
+			padding: 0;
+			border: 0;
+
+		}
+	}
+
+	.more_info {
+		margin: 10px;
+		padding: 10px;
+		font-size: 12px;
+		margin-bottom: 15px;
+		background: black;
+		border-left: 3px solid green;
+	}
+
+}
