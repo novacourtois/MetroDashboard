@@ -118,7 +118,7 @@ html,body {
   		opacity: .8;
 
   		&:hover {
-  			background: darken(#6a8282, 10%);
+  			background: darken(#6a8282, 10%) !important;
   		}
   	}
   }
@@ -132,7 +132,9 @@ html,body {
   		text-align: right;
   		font-weight: bold;
   		font-size: 4em;
-  		border-bottom: 3px solid #ccc;
+  		border-bottom: 2px solid $header-h1;
+  		line-height: 1em;
+  		border-bottom: 1px solid #353533;
   		font-family: 'bebas_neuebold';
   		color: $header-h1;
   	}

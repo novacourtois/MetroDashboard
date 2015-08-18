@@ -137,6 +137,9 @@
     $scope.currentTool = number;
   };
 
+
+  $scope.setForm('loanRequest');
+
 });
   
 
