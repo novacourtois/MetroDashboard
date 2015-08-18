@@ -1,14 +1,85 @@
 @import "settings";
 @import "foundation";
 
+
+$header-h1: #353533;
+$base-grey: #2a2a2a;
+$sidebar-grey: #1d1d1d;
+$primary-blue: #73afb7;
+$meter-blue: #7caeb5;
+$notifications-pink: #8b5854;
+$notifications-pink-font: #e191aa;
+$more-info-green: #7db97b;
+
+$meter-green: #76b78c;
+$meter-yellow: #b2b87a;
+$meter-red: #b67a79;
+
+
+
+
+
+
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('../fonts/bebasneue/bebasneue_bold-webfont.eot');
+    src: url('../fonts/bebasneue/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue/bebasneue_bold-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bebas_neuebook';
+    src: url('../fonts/bebasneue/bebasneue_book-webfont.eot');
+    src: url('../fonts/bebasneue/bebasneue_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/bebasneue_book-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue/bebasneue_book-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/bebasneue_book-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/bebasneue_book-webfont.svg#bebas_neuebook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neuelight';
+    src: url('../fonts/bebasneue/bebasneue_light-webfont.eot');
+    src: url('../fonts/bebasneue/bebasneue_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/bebasneue_light-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue/bebasneue_light-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/bebasneue_light-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/bebasneue_light-webfont.svg#bebas_neuelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neue_regularregular';
+    src: url('../fonts/bebasneue/bebasneue_regular-webfont.eot');
+    src: url('../fonts/bebasneue/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue/bebasneue_regular-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/bebasneue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html,body {
-	background: #333;
+	background: $base-grey;
 	color: #fff;
 	height: 100%;
 	max-height: 100%;
-}
-
-html, body, a, div, li, span, p {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,12 +87,17 @@ html, body, a, div, li, span, p {
 	height: 100%;
 }
 .grid-content {
+	
 	height: 70%;
-	padding: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $base-grey;
 }
 
 .header {
-	height: 30%;
+	height: 300px;
 	background: url('../../images/banner.jpg') no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -32,6 +108,19 @@ html, body, a, div, li, span, p {
   	float: right;
   	background: transparent;
   	margin-right: 40px;
+
+  	li {
+  		background: transparent;
+  	}
+
+  	a {
+  		background: #6a8282 !important;
+  		opacity: .8;
+
+  		&:hover {
+  			background: darken(#6a8282, 10%);
+  		}
+  	}
   }
 
   .header_info {
@@ -42,8 +131,10 @@ html, body, a, div, li, span, p {
   	h1 {
   		text-align: right;
   		font-weight: bold;
-  		font-size: 3.2em;
+  		font-size: 4em;
   		border-bottom: 3px solid #ccc;
+  		font-family: 'bebas_neuebold';
+  		color: $header-h1;
   	}
 
   	.header_description {
@@ -61,7 +152,8 @@ html, body, a, div, li, span, p {
 	}
 }
 .form_sidebar {
-	background: #222;
+	background: $sidebar-grey;
+	font-family: 'bebas_neue_regularregular';
 	height: 100%;
 	border-right: 2px solid #000;
 	padding: 0;
@@ -79,18 +171,20 @@ html, body, a, div, li, span, p {
 		}
 		li.active {
 			background: black;
-			border-right: 2px solid lightblue;
+			border-right: 2px solid $primary-blue;
 		}
 
 		.form-icon {
 			width: 15px;
 			margin-right: 20px;
+			vertical-align: middle;
+			margin-top: -3px;
 		}
 		a {
 			color: white;
 			width: 100%;
 			display: block;
-			font-size: 14px;
+			font-size: 1em;
 			&:hover {
 				background: black;
 			}
@@ -107,7 +201,7 @@ html, body, a, div, li, span, p {
 	.form_section_tools {
 		width: 50px;
 		height: 100%;
-		background: #222;
+		background: $sidebar-grey;
 		float: left;
 		ul {
 			margin: 0;
@@ -122,7 +216,7 @@ html, body, a, div, li, span, p {
 				}
 			}
 			li.active {
-				background: #333;
+				background: $base-grey;
 			}
 
 			.tools-icon {
@@ -138,13 +232,14 @@ html, body, a, div, li, span, p {
 		.form_section_header {
 			margin-left: 15px;
 
-			border-bottom: 3px solid #888;
+			border-bottom: 3px solid #b8b8b8;
 
 			h1 {
-				color: lightblue;
+				color: $primary-blue;
 				font-weight: 200;
 				display: inline-block;
 				margin: 0;
+				font-family: 'bebas_neue_regularregular';
 			}
 
 			.section_links {
@@ -196,6 +291,11 @@ html, body, a, div, li, span, p {
 			    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 			    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 			}
+
+			h2 {
+				color: $primary-blue;
+				font-family: 'bebas_neuelight';
+			}
 		}
 
 	}
@@ -208,7 +308,7 @@ html, body, a, div, li, span, p {
 .right_sidebar {
 	height: 100%;
 	max-height: 100%;
-	background: #222;
+	background: $sidebar-grey;
 	padding:20px 0 0 0;
 	overflow-y: auto;
 
@@ -218,9 +318,9 @@ html, body, a, div, li, span, p {
 		margin: 10px;
 		margin-bottom: 15px;
 		background: black;
-		color: pink;
+		color: $notifications-pink-font;
 		
-		border-left: 3px solid pink;
+		border-left: 3px solid $notifications-pink;
 		.notifications_list {
 			list-style-type: none;
 			margin: 0;
@@ -237,15 +337,51 @@ html, body, a, div, li, span, p {
 		font-size: 12px;
 		margin-bottom: 15px;
 		background: black;
-		border-left: 3px solid lightblue;
+		border-left: 3px solid $primary-blue;
 
 		.progress {
 			margin-top: 3px;
 			background: transparent;
-			height: 5px;
+			height: 3px;
 			padding: 0;
 			border: 0;
 
+			.meter {
+				&:after {
+					content:"";
+					background-color: #fff;
+
+					width: 6px;
+				    height: 6px;
+				    margin-right: -4px;
+				    margin-top: -2px;
+				    border-radius: 3px;
+				    float: right;
+				}
+			}
+
+			.meter-green {
+				background-color: $meter-green;
+
+				&:after {
+					background-color: $meter-green;	    
+				}
+			}
+			.meter-yellow {
+				background-color: $meter-yellow;
+
+				&:after {
+					background-color: $meter-yellow;
+				}
+			}
+
+			.meter-red {
+				background-color: $meter-red;
+
+				&:after {
+					background-color: $meter-red;
+				}
+			}
 		}
 	}
 
@@ -255,7 +391,7 @@ html, body, a, div, li, span, p {
 		font-size: 12px;
 		margin-bottom: 15px;
 		background: black;
-		border-left: 3px solid green;
+		border-left: 3px solid $more-info-green;
 	}
 
 }
